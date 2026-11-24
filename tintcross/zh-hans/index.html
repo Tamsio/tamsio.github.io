@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F6F4EE">
+<title>Tintcross — 治愈的色彩解谜游戏，适用于 iPhone 和 iPad</title>
+<meta name="description" content="滑动彩色玻璃，叠放拼片，调出新颜色，让所有信标同时亮起。数百个休闲关卡，没有计时，也不会失败。">
+<link rel="canonical" href="https://tamsio.github.io/tintcross/zh-hans/">
+<link rel="alternate" hreflang="en" href="https://tamsio.github.io/tintcross/">
+<link rel="alternate" hreflang="ru" href="https://tamsio.github.io/tintcross/ru/">
+<link rel="alternate" hreflang="es" href="https://tamsio.github.io/tintcross/es/">
+<link rel="alternate" hreflang="de" href="https://tamsio.github.io/tintcross/de/">
+<link rel="alternate" hreflang="tr" href="https://tamsio.github.io/tintcross/tr/">
+<link rel="alternate" hreflang="fr" href="https://tamsio.github.io/tintcross/fr/">
+<link rel="alternate" hreflang="it" href="https://tamsio.github.io/tintcross/it/">
+<link rel="alternate" hreflang="pt-BR" href="https://tamsio.github.io/tintcross/pt-br/">
+<link rel="alternate" hreflang="pl" href="https://tamsio.github.io/tintcross/pl/">
+<link rel="alternate" hreflang="uk" href="https://tamsio.github.io/tintcross/uk/">
+<link rel="alternate" hreflang="id" href="https://tamsio.github.io/tintcross/id/">
+<link rel="alternate" hreflang="ja" href="https://tamsio.github.io/tintcross/ja/">
+<link rel="alternate" hreflang="ko" href="https://tamsio.github.io/tintcross/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://tamsio.github.io/tintcross/zh-hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://tamsio.github.io/tintcross/zh-hant/">
+<link rel="alternate" hreflang="x-default" href="https://tamsio.github.io/tintcross/">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/tintcross/img/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tintcross — 在色彩交汇之处">
+<meta property="og:description" content="一款适用于 iPhone 和 iPad 的治愈色彩解谜游戏。滑动彩色玻璃，混合颜色，点亮所有信标。">
+<meta property="og:image" content="https://tamsio.github.io/tintcross/img/og.jpg">
+<meta property="og:url" content="https://tamsio.github.io/tintcross/zh-hans/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/tintcross/landing.css">
+<script>
+/* First visit to the English page: open the page in the device language, if Tintcross speaks it. */
+(function () {
+  var page = "zh-Hans", pages = {"en": "/tintcross/", "ru": "/tintcross/ru/", "es": "/tintcross/es/", "de": "/tintcross/de/", "tr": "/tintcross/tr/", "fr": "/tintcross/fr/", "it": "/tintcross/it/", "pt-BR": "/tintcross/pt-br/", "pl": "/tintcross/pl/", "uk": "/tintcross/uk/", "id": "/tintcross/id/", "ja": "/tintcross/ja/", "ko": "/tintcross/ko/", "zh-Hans": "/tintcross/zh-hans/", "zh-Hant": "/tintcross/zh-hant/"};
+  try {
+    if (page !== "en" || localStorage.getItem("tcLang")) return;
+    var list = navigator.languages || [navigator.language || ""];
+    for (var i = 0; i < list.length; i++) {
+      var l = (list[i] || "").toLowerCase(), code = null;
+      if (l.indexOf("zh") === 0) code = /hant|tw|hk|mo/.test(l) ? "zh-Hant" : "zh-Hans";
+      else if (l.indexOf("pt") === 0) code = "pt-BR";
+      else code = Object.keys(pages).filter(function (k) { return k.toLowerCase() === l.split("-")[0]; })[0] || null;
+      if (code === "en") return;
+      if (code && pages[code]) { location.replace(pages[code] + location.hash); return; }
+    }
+  } catch (e) {}
+})();
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav-brand" href="/tintcross/zh-hans/"><img src="/icon.svg" alt="" width="32" height="32">Tintcross</a>
+  <nav>
+    <a class="wide" href="#play">玩法</a>
+    <a class="wide" href="#gallery">截图</a>
+    <a class="wide" href="/tintcross/support/">支持</a>
+    <label class="lang-pick"><span class="sr">语言</span>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-3a15.7 15.7 0 0 0-1.3-3.9A8 8 0 0 1 18.9 8ZM12 4.1c.8 1.1 1.5 2.4 1.9 3.9h-3.8c.4-1.5 1.1-2.8 1.9-3.9ZM4.3 14a8.2 8.2 0 0 1 0-4h3.3a16.6 16.6 0 0 0 0 4H4.3Zm.8 2h3a15.7 15.7 0 0 0 1.3 3.9A8 8 0 0 1 5.1 16Zm3-8h-3a8 8 0 0 1 4.3-3.9C8.8 5.3 8.4 6.6 8.1 8ZM12 19.9c-.8-1.1-1.5-2.4-1.9-3.9h3.8c-.4 1.5-1.1 2.8-1.9 3.9Zm2.3-5.9H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4Zm.3 5.9c.6-1.2 1-2.5 1.3-3.9h3a8 8 0 0 1-4.3 3.9Zm1.8-5.9a16.6 16.6 0 0 0 0-4h3.3a8.2 8.2 0 0 1 0 4h-3.3Z"/></svg>
+      <select onchange="try{localStorage.setItem('tcLang',this.options[this.selectedIndex].getAttribute('data-code'))}catch(e){};location.href=this.value">
+        <option value="/tintcross/" data-code="en">English</option>
+        <option value="/tintcross/ru/" data-code="ru">Русский</option>
+        <option value="/tintcross/es/" data-code="es">Español</option>
+        <option value="/tintcross/de/" data-code="de">Deutsch</option>
+        <option value="/tintcross/tr/" data-code="tr">Türkçe</option>
+        <option value="/tintcross/fr/" data-code="fr">Français</option>
+        <option value="/tintcross/it/" data-code="it">Italiano</option>
+        <option value="/tintcross/pt-br/" data-code="pt-BR">Português (Brasil)</option>
+        <option value="/tintcross/pl/" data-code="pl">Polski</option>
+        <option value="/tintcross/uk/" data-code="uk">Українська</option>
+        <option value="/tintcross/id/" data-code="id">Bahasa Indonesia</option>
+        <option value="/tintcross/ja/" data-code="ja">日本語</option>
+        <option value="/tintcross/ko/" data-code="ko">한국어</option>
+        <option value="/tintcross/zh-hans/" data-code="zh-Hans" selected>简体中文</option>
+        <option value="/tintcross/zh-hant/" data-code="zh-Hant">繁體中文</option>
+      </select>
+    </label>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="glass g-red" aria-hidden="true"></div>
+  <div class="glass g-yellow" aria-hidden="true"></div>
+  <div class="glass g-blue" aria-hidden="true"></div>
+  <div class="hero-text">
+    <img class="hero-icon" src="/icon.svg" alt="" width="112" height="112">
+    <h1>在色彩<br><span class="mix">交汇之处</span></h1>
+    <p class="lead">滑动彩色玻璃，叠放拼片，调出新颜色，让所有信标同时亮起。这是一款适用于 iPhone 和 iPad 的休闲逻辑解谜游戏。</p>
+    <div class="cta">
+      <span class="store-soon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M16.4 12.7c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.2 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg><span><small>即将登陆</small>App Store</span></span>
+      <span class="badge">免费 · 无应用内购买</span>
+    </div>
+  </div>
+  <div class="hero-phone">
+    <div class="phone"><img src="/tintcross/img/board-beacons.jpg" alt="一个已解开的 Tintcross 关卡：红、黄、蓝三色玻璃相互叠放，所有信标均已点亮" width="600" height="951"></div>
+  </div>
+</section>
+
+<section class="steps" id="play">
+  <h2>一条规则，无穷深度。</h2>
+  <p class="section-lead">每块拼片都是一片彩色玻璃。玻璃重叠之处，颜色就会混合；棋盘上的每个信标都只要求一种颜色。</p>
+  <div class="step-grid">
+    <figure class="step">
+      <img src="/tintcross/img/board-mix.jpg" alt="红色玻璃叠在黄色玻璃上，重叠处变成橙色" loading="lazy" width="600" height="930">
+      <figcaption><span class="num">1</span><strong><span class="c-red">红</span> + <span class="c-yellow">黄</span> = <span class="c-orange">橙</span></strong>把玻璃滑到另一块玻璃上，看颜色在交汇处混合。</figcaption>
+    </figure>
+    <figure class="step">
+      <img src="/tintcross/img/board-shapes.jpg" alt="一块蓝色三角形玻璃覆盖了两个信标" loading="lazy" width="600" height="930">
+      <figcaption><span class="num">2</span><strong>每块拼片都很重要</strong>圆形、三角形、圆环和方框能覆盖不同的位置。点击拼片即可旋转。</figcaption>
+    </figure>
+    <figure class="step">
+      <img src="/tintcross/img/board-rings.jpg" alt="玻璃圆环的镂空处留下一个空信标" loading="lazy" width="600" height="930">
+      <figcaption><span class="num">3</span><strong>点亮所有信标</strong>修好一个信标，可能又会破坏另外两个。所有信标同时亮起，即可过关。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature"><span class="dot d-red"></span><h3>不会失败</h3><p>没有计时，没有步数限制，没有游戏结束。想多久都可以。</p></div>
+  <div class="feature"><span class="dot d-yellow"></span><h3>数百个关卡</h3><p>每章难度从“简单”逐步升至“超级”，随后让你喘口气。新章节持续推出。</p></div>
+  <div class="feature"><span class="dot d-blue"></span><h3>人人都能看清</h3><p>每种颜色都有专属纹样（条纹、圆点或波纹），还有高对比度模式。</p></div>
+  <div class="feature"><span class="dot d-orange"></span><h3>每章都有新玩法</h3><p>颜料色斑、混色玻璃、反转颜色的白色玻璃、轨道、转轴和配对信标。</p></div>
+  <div class="feature"><span class="dot d-green"></span><h3>一定有解</h3><p>每一关都经过求解程序验证，最少步数已知。</p></div>
+  <div class="feature"><span class="dot d-purple"></span><h3>离线畅玩</h3><p>无需账号，无需联网。解开关卡时，会响起柔和的旋律。</p></div>
+</section>
+
+<section class="langs" id="languages">
+  <h2>用你的语言畅玩</h2>
+  <p class="section-lead">Tintcross 支持 15 种语言，并会跟随设备语言。你可以随时在“设置”中切换。</p>
+  <ul class="chips">
+    <li><a href="/tintcross/" lang="en">English</a></li>
+    <li><a href="/tintcross/ru/" lang="ru">Русский</a></li>
+    <li><a href="/tintcross/es/" lang="es">Español</a></li>
+    <li><a href="/tintcross/de/" lang="de">Deutsch</a></li>
+    <li><a href="/tintcross/tr/" lang="tr">Türkçe</a></li>
+    <li><a href="/tintcross/fr/" lang="fr">Français</a></li>
+    <li><a href="/tintcross/it/" lang="it">Italiano</a></li>
+    <li><a href="/tintcross/pt-br/" lang="pt-BR">Português (Brasil)</a></li>
+    <li><a href="/tintcross/pl/" lang="pl">Polski</a></li>
+    <li><a href="/tintcross/uk/" lang="uk">Українська</a></li>
+    <li><a href="/tintcross/id/" lang="id">Bahasa Indonesia</a></li>
+    <li><a href="/tintcross/ja/" lang="ja">日本語</a></li>
+    <li><a href="/tintcross/ko/" lang="ko">한국어</a></li>
+    <li><a href="/tintcross/zh-hans/" lang="zh-Hans" aria-current="page">简体中文</a></li>
+    <li><a href="/tintcross/zh-hant/" lang="zh-Hant">繁體中文</a></li>
+  </ul>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2>截图</h2>
+  <div class="strip" tabindex="0" aria-label="截图，可左右滑动">
+    <img src="/tintcross/img/zh-hans/shot-beacons.jpg" alt="混合颜色 点亮所有信标" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/zh-hans/shot-mix.jpg" alt="红 + 黄 = 橙" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/zh-hans/shot-shapes.jpg" alt="每块拼片 都很重要" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/zh-hans/shot-rotate.jpg" alt="点击即可旋转" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/zh-hans/shot-rings.jpg" alt="圆环的中心 不会上色" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/zh-hans/shot-patterns.jpg" alt="每种颜色 都有专属纹样" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/zh-hans/shot-white.jpg" alt="白色玻璃 反转颜色" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/zh-hans/shot-levels.jpg" alt="数百个关卡" loading="lazy" width="540" height="1174">
+  </div>
+</section>
+
+<section class="closing">
+  <div class="glass g-blue small" aria-hidden="true"></div>
+  <div class="glass g-red small" aria-hidden="true"></div>
+  <h2>即将登陆 iPhone 和 iPad</h2>
+  <p>免费游玩。广告只在关卡之间出现，解谜时绝不打扰。没有应用内购买。</p>
+  <p class="contact">咨询或媒体合作： <a href="mailto:tintcross.support@gmail.com">tintcross.support@gmail.com</a></p>
+</section>
+</main>
+
+<footer class="foot">
+  <div><a class="foot-brand" href="/"><img src="/icon.svg" alt="" width="20" height="20">Tamsio</a></div>
+  <nav><a href="/tintcross/support/">支持</a><a href="/tintcross/privacy/">隐私政策</a></nav>
+  <div class="copy">© 2026 Eduard Abdullin</div>
+</footer>
+</body>
+</html>

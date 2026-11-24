@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F6F4EE">
+<title>Tintcross — um quebra-cabeça de cores relaxante para iPhone e iPad</title>
+<meta name="description" content="Deslize vidros coloridos, sobreponha peças e misture novas cores. Acenda todos os faróis ao mesmo tempo. Centenas de fases tranquilas, sem cronômetro e sem derrota.">
+<link rel="canonical" href="https://tamsio.github.io/tintcross/pt-br/">
+<link rel="alternate" hreflang="en" href="https://tamsio.github.io/tintcross/">
+<link rel="alternate" hreflang="ru" href="https://tamsio.github.io/tintcross/ru/">
+<link rel="alternate" hreflang="es" href="https://tamsio.github.io/tintcross/es/">
+<link rel="alternate" hreflang="de" href="https://tamsio.github.io/tintcross/de/">
+<link rel="alternate" hreflang="tr" href="https://tamsio.github.io/tintcross/tr/">
+<link rel="alternate" hreflang="fr" href="https://tamsio.github.io/tintcross/fr/">
+<link rel="alternate" hreflang="it" href="https://tamsio.github.io/tintcross/it/">
+<link rel="alternate" hreflang="pt-BR" href="https://tamsio.github.io/tintcross/pt-br/">
+<link rel="alternate" hreflang="pl" href="https://tamsio.github.io/tintcross/pl/">
+<link rel="alternate" hreflang="uk" href="https://tamsio.github.io/tintcross/uk/">
+<link rel="alternate" hreflang="id" href="https://tamsio.github.io/tintcross/id/">
+<link rel="alternate" hreflang="ja" href="https://tamsio.github.io/tintcross/ja/">
+<link rel="alternate" hreflang="ko" href="https://tamsio.github.io/tintcross/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://tamsio.github.io/tintcross/zh-hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://tamsio.github.io/tintcross/zh-hant/">
+<link rel="alternate" hreflang="x-default" href="https://tamsio.github.io/tintcross/">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/tintcross/img/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tintcross — onde as cores se cruzam">
+<meta property="og:description" content="Um quebra-cabeça de cores relaxante para iPhone e iPad. Deslize vidros coloridos, misture cores e acenda todos os faróis.">
+<meta property="og:image" content="https://tamsio.github.io/tintcross/img/og.jpg">
+<meta property="og:url" content="https://tamsio.github.io/tintcross/pt-br/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/tintcross/landing.css">
+<script>
+/* First visit to the English page: open the page in the device language, if Tintcross speaks it. */
+(function () {
+  var page = "pt-BR", pages = {"en": "/tintcross/", "ru": "/tintcross/ru/", "es": "/tintcross/es/", "de": "/tintcross/de/", "tr": "/tintcross/tr/", "fr": "/tintcross/fr/", "it": "/tintcross/it/", "pt-BR": "/tintcross/pt-br/", "pl": "/tintcross/pl/", "uk": "/tintcross/uk/", "id": "/tintcross/id/", "ja": "/tintcross/ja/", "ko": "/tintcross/ko/", "zh-Hans": "/tintcross/zh-hans/", "zh-Hant": "/tintcross/zh-hant/"};
+  try {
+    if (page !== "en" || localStorage.getItem("tcLang")) return;
+    var list = navigator.languages || [navigator.language || ""];
+    for (var i = 0; i < list.length; i++) {
+      var l = (list[i] || "").toLowerCase(), code = null;
+      if (l.indexOf("zh") === 0) code = /hant|tw|hk|mo/.test(l) ? "zh-Hant" : "zh-Hans";
+      else if (l.indexOf("pt") === 0) code = "pt-BR";
+      else code = Object.keys(pages).filter(function (k) { return k.toLowerCase() === l.split("-")[0]; })[0] || null;
+      if (code === "en") return;
+      if (code && pages[code]) { location.replace(pages[code] + location.hash); return; }
+    }
+  } catch (e) {}
+})();
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav-brand" href="/tintcross/pt-br/"><img src="/icon.svg" alt="" width="32" height="32">Tintcross</a>
+  <nav>
+    <a class="wide" href="#play">Como jogar</a>
+    <a class="wide" href="#gallery">Capturas de tela</a>
+    <a class="wide" href="/tintcross/support/">Suporte</a>
+    <label class="lang-pick"><span class="sr">Idioma</span>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-3a15.7 15.7 0 0 0-1.3-3.9A8 8 0 0 1 18.9 8ZM12 4.1c.8 1.1 1.5 2.4 1.9 3.9h-3.8c.4-1.5 1.1-2.8 1.9-3.9ZM4.3 14a8.2 8.2 0 0 1 0-4h3.3a16.6 16.6 0 0 0 0 4H4.3Zm.8 2h3a15.7 15.7 0 0 0 1.3 3.9A8 8 0 0 1 5.1 16Zm3-8h-3a8 8 0 0 1 4.3-3.9C8.8 5.3 8.4 6.6 8.1 8ZM12 19.9c-.8-1.1-1.5-2.4-1.9-3.9h3.8c-.4 1.5-1.1 2.8-1.9 3.9Zm2.3-5.9H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4Zm.3 5.9c.6-1.2 1-2.5 1.3-3.9h3a8 8 0 0 1-4.3 3.9Zm1.8-5.9a16.6 16.6 0 0 0 0-4h3.3a8.2 8.2 0 0 1 0 4h-3.3Z"/></svg>
+      <select onchange="try{localStorage.setItem('tcLang',this.options[this.selectedIndex].getAttribute('data-code'))}catch(e){};location.href=this.value">
+        <option value="/tintcross/" data-code="en">English</option>
+        <option value="/tintcross/ru/" data-code="ru">Русский</option>
+        <option value="/tintcross/es/" data-code="es">Español</option>
+        <option value="/tintcross/de/" data-code="de">Deutsch</option>
+        <option value="/tintcross/tr/" data-code="tr">Türkçe</option>
+        <option value="/tintcross/fr/" data-code="fr">Français</option>
+        <option value="/tintcross/it/" data-code="it">Italiano</option>
+        <option value="/tintcross/pt-br/" data-code="pt-BR" selected>Português (Brasil)</option>
+        <option value="/tintcross/pl/" data-code="pl">Polski</option>
+        <option value="/tintcross/uk/" data-code="uk">Українська</option>
+        <option value="/tintcross/id/" data-code="id">Bahasa Indonesia</option>
+        <option value="/tintcross/ja/" data-code="ja">日本語</option>
+        <option value="/tintcross/ko/" data-code="ko">한국어</option>
+        <option value="/tintcross/zh-hans/" data-code="zh-Hans">简体中文</option>
+        <option value="/tintcross/zh-hant/" data-code="zh-Hant">繁體中文</option>
+      </select>
+    </label>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="glass g-red" aria-hidden="true"></div>
+  <div class="glass g-yellow" aria-hidden="true"></div>
+  <div class="glass g-blue" aria-hidden="true"></div>
+  <div class="hero-text">
+    <img class="hero-icon" src="/icon.svg" alt="" width="112" height="112">
+    <h1>Onde as cores<br><span class="mix">se cruzam.</span></h1>
+    <p class="lead">Deslize vidros coloridos, sobreponha peças e misture novas cores. Acenda todos os faróis ao mesmo tempo — um quebra-cabeça de lógica tranquilo para iPhone e iPad.</p>
+    <div class="cta">
+      <span class="store-soon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M16.4 12.7c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.2 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg><span><small>Em breve na</small>App Store</span></span>
+      <span class="badge">Grátis · sem compras no app</span>
+    </div>
+  </div>
+  <div class="hero-phone">
+    <div class="phone"><img src="/tintcross/img/board-beacons.jpg" alt="Uma fase de Tintcross resolvida: vidros vermelho, amarelo e azul sobrepostos e todos os faróis acesos" width="600" height="951"></div>
+  </div>
+</section>
+
+<section class="steps" id="play">
+  <h2>Uma regra. Profundidade sem fim.</h2>
+  <p class="section-lead">Cada peça é uma lâmina de vidro colorido. Onde as lâminas se sobrepõem, as cores se misturam, e cada farol do tabuleiro pede exatamente uma cor.</p>
+  <div class="step-grid">
+    <figure class="step">
+      <img src="/tintcross/img/board-mix.jpg" alt="Vidro vermelho sobre vidro amarelo forma uma área laranja" loading="lazy" width="600" height="930">
+      <figcaption><span class="num">1</span><strong><span class="c-red">Vermelho</span> + <span class="c-yellow">amarelo</span> = <span class="c-orange">laranja</span></strong>Deslize vidro sobre vidro e veja as cores se misturarem onde se cruzam.</figcaption>
+    </figure>
+    <figure class="step">
+      <img src="/tintcross/img/board-shapes.jpg" alt="Um triângulo de vidro azul cobrindo dois faróis" loading="lazy" width="600" height="930">
+      <figcaption><span class="num">2</span><strong>Cada peça importa</strong>Círculos, triângulos, anéis e molduras alcançam lugares diferentes. Toque em uma peça para girá-la.</figcaption>
+    </figure>
+    <figure class="step">
+      <img src="/tintcross/img/board-rings.jpg" alt="Anéis de vidro deixando um farol vazio no furo" loading="lazy" width="600" height="930">
+      <figcaption><span class="num">3</span><strong>Acenda todos os faróis</strong>Conserte um farol e talvez estrague outros dois. A fase está resolvida quando todos brilham ao mesmo tempo.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature"><span class="dot d-red"></span><h3>Não dá para perder</h3><p>Sem cronômetro, sem limite de jogadas, sem game over. Pense o quanto quiser.</p></div>
+  <div class="feature"><span class="dot d-yellow"></span><h3>Centenas de fases</h3><p>Os capítulos vão do Fácil ao Super e depois deixam você respirar. Sempre chegam novos capítulos.</p></div>
+  <div class="feature"><span class="dot d-blue"></span><h3>Para todos os olhos</h3><p>Cada cor tem seu próprio padrão (listras, pontos ou ondas), além de um modo de alto contraste.</p></div>
+  <div class="feature"><span class="dot d-orange"></span><h3>Novas ideias a cada capítulo</h3><p>Manchas de tinta, vidro misto, vidro branco que inverte as cores, trilhos, eixos e faróis gêmeos.</p></div>
+  <div class="feature"><span class="dot d-green"></span><h3>Sempre tem solução</h3><p>Cada fase é verificada por um solucionador, e o menor número de jogadas é conhecido.</p></div>
+  <div class="feature"><span class="dot d-purple"></span><h3>Jogue offline</h3><p>Não precisa de conta nem de internet para jogar. Uma melodia suave toca quando você resolve uma fase.</p></div>
+</section>
+
+<section class="langs" id="languages">
+  <h2>Jogue no seu idioma</h2>
+  <p class="section-lead">Tintcross fala 15 idiomas e segue o idioma do seu aparelho. Você pode trocar quando quiser em Configurações.</p>
+  <ul class="chips">
+    <li><a href="/tintcross/" lang="en">English</a></li>
+    <li><a href="/tintcross/ru/" lang="ru">Русский</a></li>
+    <li><a href="/tintcross/es/" lang="es">Español</a></li>
+    <li><a href="/tintcross/de/" lang="de">Deutsch</a></li>
+    <li><a href="/tintcross/tr/" lang="tr">Türkçe</a></li>
+    <li><a href="/tintcross/fr/" lang="fr">Français</a></li>
+    <li><a href="/tintcross/it/" lang="it">Italiano</a></li>
+    <li><a href="/tintcross/pt-br/" lang="pt-BR" aria-current="page">Português (Brasil)</a></li>
+    <li><a href="/tintcross/pl/" lang="pl">Polski</a></li>
+    <li><a href="/tintcross/uk/" lang="uk">Українська</a></li>
+    <li><a href="/tintcross/id/" lang="id">Bahasa Indonesia</a></li>
+    <li><a href="/tintcross/ja/" lang="ja">日本語</a></li>
+    <li><a href="/tintcross/ko/" lang="ko">한국어</a></li>
+    <li><a href="/tintcross/zh-hans/" lang="zh-Hans">简体中文</a></li>
+    <li><a href="/tintcross/zh-hant/" lang="zh-Hant">繁體中文</a></li>
+  </ul>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2>Capturas de tela</h2>
+  <div class="strip" tabindex="0" aria-label="Capturas de tela, role para o lado">
+    <img src="/tintcross/img/pt-br/shot-beacons.jpg" alt="Misture cores. Acenda cada farol" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/pt-br/shot-mix.jpg" alt="Vermelho + amarelo = laranja" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/pt-br/shot-shapes.jpg" alt="Cada peça importa" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/pt-br/shot-rotate.jpg" alt="Toque para girar" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/pt-br/shot-rings.jpg" alt="Os anéis deixam o centro livre" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/pt-br/shot-patterns.jpg" alt="Um padrão para cada cor" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/pt-br/shot-white.jpg" alt="O vidro branco inverte as cores" loading="lazy" width="540" height="1174">
+    <img src="/tintcross/img/pt-br/shot-levels.jpg" alt="Centenas de fases" loading="lazy" width="540" height="1174">
+  </div>
+</section>
+
+<section class="closing">
+  <div class="glass g-blue small" aria-hidden="true"></div>
+  <div class="glass g-red small" aria-hidden="true"></div>
+  <h2>Em breve para iPhone e iPad</h2>
+  <p>Grátis para jogar, com anúncios entre as fases, nunca durante um desafio. Sem compras no app.</p>
+  <p class="contact">Dúvidas ou imprensa? <a href="mailto:tintcross.support@gmail.com">tintcross.support@gmail.com</a></p>
+</section>
+</main>
+
+<footer class="foot">
+  <div><a class="foot-brand" href="/"><img src="/icon.svg" alt="" width="20" height="20">Tamsio</a></div>
+  <nav><a href="/tintcross/support/">Suporte</a><a href="/tintcross/privacy/">Política de privacidade</a></nav>
+  <div class="copy">© 2026 Eduard Abdullin</div>
+</footer>
+</body>
+</html>
